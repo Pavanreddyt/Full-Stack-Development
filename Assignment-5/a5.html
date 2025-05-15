@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        article, aside, section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <article>
+        <h2>Feedback Form</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" required></textarea>
+
+            <input type="submit" value="Submit Feedback">
+        </form>
+    </article>
+
+    <aside>
+        <h2>What is Web Storage?</h2>
+        <p>
+            <strong>localStorage</strong> and <strong>sessionStorage</strong> are part of the Web Storage API in HTML5.
+            They allow websites to store data in a user's browser.
+        </p>
+        <p>
+            <strong>localStorage</strong> stores data with no expiration time — it persists even after the browser is closed.
+            This is useful for saving user preferences, themes, or cached data.
+        </p>
+        <p>
+            <strong>sessionStorage</strong> stores data for the duration of the page session — the data is cleared when the page is closed.
+            This is often used for temporary data like form progress or tab-specific information.
+        </p>
+    </aside>
+
+</body>
+</html>
