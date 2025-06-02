@@ -1,0 +1,193 @@
+/* Overall body styling with soft warm light background */
+body {
+  background-color: #fffaf0; /* Floral white - soft warm light */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 50px;
+  background-color: white;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  border-radius: 10px;
+  border: 1px solid #e1e8f0;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 45px;
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 20px;
+}
+
+header h1 {
+  font-size: 48px;
+  font-style: normal; /* override italic */
+  color: #2c3e50;
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
+}
+
+header h2 {
+  font-size: 26px;
+  font-style: normal;
+  color: #2980b9;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+/* Contact info */
+.contact-info {
+  margin-bottom: 12px;
+  font-style: normal;
+  font-size: 17px;
+  color: #555;
+}
+
+.contact-info a {
+  color: #2980b9;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #1a5276;
+  text-decoration: underline;
+}
+
+.separator {
+  color: #ccc;
+  margin: 0 6px;
+}
+
+/* Section Titles */
+h3 {
+  font-style: normal;
+  color: #34495e;
+  border-left: 5px solid #2980b9;
+  padding-left: 12px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+/* Paragraph styling */
+p {
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Remove all default list styles globally */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 20px 0;
+  color: #444;
+}
+
+/* Generic list item styling */
+li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 28px; /* space for custom bullet */
+  font-style: normal;
+  font-size: 16px;
+}
+
+/* Internships and Projects main list item bullets: blue squares */
+.internships ul > li::before,
+.projects ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: #2980b9;
+  border-radius: 3px;
+}
+
+/* Internships and Projects sub-list item bullets: smaller circles */
+.internships ul ul > li::before,
+.projects ul ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: #7fb3d5;
+  border-radius: 50%;
+}
+
+/* Skills list items get checkmark before */
+.skills-list > li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #2980b9;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Hover effect on skills */
+.skills-list > li:hover {
+  color: #1a5276;
+}
+
+.skills-list > li:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #2980b9;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .container {
+    padding: 30px 25px;
+  }
+
+  .two-column {
+    flex-direction: column;
+  }
+  
+  header h1 {
+    font-size: 38px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  header h2 {
+    font-size: 18px;
+  }
+}
